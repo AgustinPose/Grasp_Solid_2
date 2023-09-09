@@ -25,7 +25,8 @@ namespace Full_GRASP_And_SOLID
             recipe.FinalProduct = GetProduct("Café con leche");
             recipe.AddStep(new Step(GetProduct("Café"), 100, GetEquipment("Cafetera"), 120));
             recipe.AddStep(new Step(GetProduct("Leche"), 200, GetEquipment("Hervidor"), 60));
-            recipe.PrintRecipe();
+
+            ConsolePrinter.ImprimirReceta(recipe);
         }
 
         private static void PopulateCatalogs()
@@ -36,6 +37,9 @@ namespace Full_GRASP_And_SOLID
 
             AddEquipmentToCatalog("Cafetera", 1000);
             AddEquipmentToCatalog("Hervidor", 2000);
+
+
+
         }
 
         private static void AddProductToCatalog(string description, double unitCost)
